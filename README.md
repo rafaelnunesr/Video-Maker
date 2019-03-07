@@ -1,6 +1,2 @@
-echo "# Video-Maker" >> README.md
-git init
-git add README.md
-git commit -m "first commit"
-git remote add origin https://github.com/rafaelnunesr/Video-Maker.git
-git push -u origin master
+video-maker
+Projeto open source para fazer vídeos automatizados em Python
