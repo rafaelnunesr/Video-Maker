@@ -21,7 +21,4 @@ def start():
     searchTerm = ask_and_return_seach_term()
     prefixTerm = ask_and_return_prefix()
 
-    print(searchTerm)
-    print(prefixTerm)
-
 start()
