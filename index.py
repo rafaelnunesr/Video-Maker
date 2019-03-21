@@ -1,3 +1,5 @@
+from Robots.Text import robot, fechContentFromWikipedia
+
 def start():
 
     def ask_and_return_seach_term():
@@ -18,7 +20,10 @@ def start():
             return 'Invalid option'
 
 
+
     searchTerm = ask_and_return_seach_term()
     prefixTerm = ask_and_return_prefix()
+    robot(searchTerm)
+    fechContentFromWikipedia(searchTerm)
 
 start()
