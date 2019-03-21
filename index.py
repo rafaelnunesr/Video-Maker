@@ -1,4 +1,4 @@
-from Robots.Text import robot, fechContentFromWikipedia
+from Robots.Text import robot, fech_content_from_wikipedia
 
 def start():
 
@@ -21,9 +21,9 @@ def start():
 
 
 
-    searchTerm = ask_and_return_seach_term()
-    prefixTerm = ask_and_return_prefix()
-    robot(searchTerm)
-    fechContentFromWikipedia(searchTerm)
+    search_term = ask_and_return_seach_term()
+    prefix_term = ask_and_return_prefix()
+    robot(search_term)
+    fech_content_from_wikipedia(search_term)
 
 start()
