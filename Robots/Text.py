@@ -2,7 +2,6 @@ import Algorithmia
 from Credentials.algorithmia_credential import api_key
 
 
-
 def robot(content_user):
     print(f'Recebi com sucesso o content: {content_user}')
 
@@ -18,3 +17,4 @@ def fech_content_from_wikipedia(content_user):
     source_content_original = source_content_complete['content']
 
 
+    print(source_content_original)

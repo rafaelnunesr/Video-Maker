@@ -19,11 +19,20 @@ def start():
         except IndexError:
             return 'Invalid option'
 
+    def fech_content_from_wikipedia():
 
+        print('running a wikipedia text preview')
+
+        file = open('wiki.txt', 'r')
+        file.close()
 
     search_term = ask_and_return_seach_term()
     prefix_term = ask_and_return_prefix()
     robot(search_term)
-    fech_content_from_wikipedia(search_term)
+    # fech_content_from_wikipedia(search_term)
+    fech_content_from_wikipedia()
+
+    searchTerm = ask_and_return_seach_term()
+    prefixTerm = ask_and_return_prefix()
 
 start()
