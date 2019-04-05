@@ -17,4 +17,31 @@ def fech_content_from_wikipedia(content_user):
     source_content_original = source_content_complete['content']
 
 
-    print(source_content_original)
+    return source_content_original
+
+def __header(content):
+
+    head = content[:content.find('==')]
+    return head
+
+def __clean_dates(content):
+
+    open_parentheses = content.find('(')
+    close_parentheses = content.find(')') + 2 # It adds 2 to remove the character itself and the space after
+    new_content = ''.join(content[:open_parentheses]
+                          + content[close_parentheses:])
+    return new_content
+
+
+def sanitize_content_from_wikipedia(source_original_str):
+
+    just_head = __header(source_original_str)
+    head_cleaned = __clean_dates(just_head)
+
+
+
+
+
+
+
+
