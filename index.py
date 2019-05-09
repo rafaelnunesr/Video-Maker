@@ -1,5 +1,4 @@
-from Robots.Text import robot, fech_content_from_wikipedia, \
-                        sanitize_content_from_wikipedia
+from Robots.Text import *
 
 def start():
 
@@ -31,7 +30,9 @@ def start():
     prefix_term = ask_and_return_prefix()
     robot(search_term)
     content = fech_content_from_wikipedia(search_term)
-    sanitize_content_from_wikipedia(content)
+    sanitized = sanitize_content_from_wikipedia(content)
+    make_sentences(sanitized)
+
 
 
 

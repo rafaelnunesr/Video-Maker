@@ -27,9 +27,14 @@ def __header(content):
 def __clean_dates(content):
 
     open_parentheses = content.find('(')
-    close_parentheses = content.find(')') + 2 # It adds 2 to remove the character itself and the space after
+    close_parentheses = content.find(')') + 1
     new_content = ''.join(content[:open_parentheses]
                           + content[close_parentheses:])
+    return new_content
+
+def __remove_doble_spaces(content):
+
+    new_content = content.replace('  ', ' ')
     return new_content
 
 
@@ -37,6 +42,26 @@ def sanitize_content_from_wikipedia(source_original_str):
 
     just_head = __header(source_original_str)
     head_cleaned = __clean_dates(just_head)
+    no_doble_spaces = __remove_doble_spaces(head_cleaned)
+    return no_doble_spaces
+
+def make_sentences(content):
+
+    ti
+
+    sentences = []
+
+    while True:
+        if content == '':
+            break
+        end = content.find('.') + 1
+        sentences.append(content[:end])
+        content = content[end:].strip()
+
+    return sentences
+
+
+
 
 
 
