@@ -1,3 +1,4 @@
+import re
 import Algorithmia
 from Credentials.algorithmia_credential import api_key
 
@@ -47,16 +48,16 @@ def sanitize_content_from_wikipedia(source_original_str):
 
 def make_sentences(content):
 
-    ti
+    sentence_endings = re.compile('[.!?]')
+    sentences = sentence_endings.split(content)
 
-    sentences = []
+    temp_sentence = []
 
-    while True:
-        if content == '':
-            break
-        end = content.find('.') + 1
-        sentences.append(content[:end])
-        content = content[end:].strip()
+    for sentence in sentences:
+        temp_sentence.append(sentence.strip())
+
+    sentences = temp_sentence
+
 
     return sentences
 
